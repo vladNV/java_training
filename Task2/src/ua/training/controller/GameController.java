@@ -78,8 +78,7 @@ public class GameController {
         if(input.length() < String.valueOf(RAND_MAX).length() + 1) {
             char inputArr[] = input.toCharArray();
             for (int i = 0; i < input.length(); i++) {
-                //if char isn't 0-9;
-                if(inputArr[i] < 48 || inputArr[i] > 57) {
+                if(inputArr[i] < '0' || inputArr[i] > '9') {
                     return false;
                 }
             }
