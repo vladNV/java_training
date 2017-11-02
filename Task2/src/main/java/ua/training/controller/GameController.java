@@ -54,7 +54,7 @@ public class GameController {
                         .append(" you wrote - ")
                         .append(enteredNumber).append("\n");
                 switch (game.compareNumber(enteredNumber)) {
-                    case -1:
+                    case  1:
                         display.println(GameDisplay.LESS);
                         break;
                     case  0:
@@ -62,7 +62,7 @@ public class GameController {
                         display.println(GameDisplay.MY_NUMBER + game.getNumber());
                         finish = true;
                         break;
-                    case  1:
+                    case  -1:
                         display.println(GameDisplay.MORE);
                         break;
                     default:
@@ -87,11 +87,11 @@ public class GameController {
         return false;
     }
 
-    private int rand() {
+    public int rand() {
         return getRandomNumber(0, RAND_MAX);
     }
 
-    private int rand(int min, int max) {
+    public int rand(int min, int max) {
         if (min < 0 || max < 0) {
             throw new RuntimeException("Min or Max cannot be negative!");
         }

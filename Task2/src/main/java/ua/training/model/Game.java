@@ -21,7 +21,7 @@ public class Game {
 
     public int compareNumber(int number) {
         if(number == this.number) return 0;
-        int dif = number - this.number;
+        int dif = this.number - number;
         return -dif/Math.abs(dif);
     }
 
