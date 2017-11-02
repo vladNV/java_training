@@ -22,7 +22,7 @@ public class Game {
     public int compareNumber(int number) {
         if(number == this.number) return 0;
         int dif = number - this.number;
-        return dif/Math.abs(dif);
+        return -dif/Math.abs(dif);
     }
 
 }
