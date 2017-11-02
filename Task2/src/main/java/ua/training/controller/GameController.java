@@ -14,6 +14,8 @@ import ua.training.view.GameDisplay;
 import java.util.Scanner;
 
 public class GameController {
+
+    /** Max value in range. 0x64 = 100 */
     public static final int RAND_MAX = 0x64;
 
     private Game game;
@@ -74,6 +76,12 @@ public class GameController {
         }
     }
 
+    /**
+     * Checks input value. Check length and value of input.
+     * @param input string value
+     * @return true, if length of input less then RAND_MAX.length() + 1
+     * and all chars are integer numbers, otherwise false.
+     */
     private boolean isGoodNumber(String input) {
         if(input.length() < String.valueOf(RAND_MAX).length() + 1) {
             char inputArr[] = input.toCharArray();
@@ -100,6 +108,13 @@ public class GameController {
         }
         return getRandomNumber(min, max);
     }
+
+    /**
+     * Returns a random number in range (min, max)
+     * @param min - start range (inclusive)
+     * @param max - end range (inclusive)
+     * @return returns a random integer number in range (min, max)
+     */
 
     private int getRandomNumber(int min, int max) {
         return (int) (min + Math.random() * (max - min));
