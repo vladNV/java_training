@@ -2,3 +2,4 @@ ua\training\Main.class
 ua\training\model\Game.class
 ua\training\view\GameDisplay.class
 ua\training\controller\GameController.class
+ua\training\model\GameConst.class

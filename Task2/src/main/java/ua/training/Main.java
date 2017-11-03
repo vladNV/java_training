@@ -12,7 +12,7 @@ public class Main {
         GameDisplay display = new GameDisplay();
         GameController controller = new GameController(game, display);
 
-        controller.start();
+        controller.play();
 
     }
 }
