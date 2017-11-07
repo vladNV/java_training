@@ -7,7 +7,7 @@ public class Main {
         Sentences model = new Sentences();
         SentencesView view = new SentencesView();
         SentencesController controller = new SentencesController(model, view);
-
+        // start program
         controller.userProcess();
 
     }
