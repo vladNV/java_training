@@ -18,7 +18,7 @@ public class View {
 
     /**
      * Prints message to the console
-     * @param message the message is output to the console
+     * @param message the message is output to the console.
      */
     public void print(String message) {
         System.out.println(message);
@@ -26,7 +26,7 @@ public class View {
 
     /**
      * Prints array to the console
-     * @param array the array is output to the console
+     * @param array the array is output to the console.
      */
     public void printArray(long[] array) {
         System.out.println(Arrays.toString(array));
