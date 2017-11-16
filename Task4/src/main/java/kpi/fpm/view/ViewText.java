@@ -45,9 +45,11 @@ public interface ViewText {
     String CONTACT_GROUP = "Select a group for this contact.\n" +
                           "For example, 'Coworker', 'Friend'";
 
-    String INDEX =        "Enter index, only numbers.";
 
     String FLAT =         "Enter number of flat. If it is private house. Enter 0";
 
+    String SUCH_LOGIN = "Such login ";
+
+    String ALREADY_EXIST = " has already existed! Pls, enter another.";
 
 }

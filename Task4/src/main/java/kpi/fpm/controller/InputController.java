@@ -8,14 +8,18 @@
 
 package kpi.fpm.controller;
 
+import kpi.fpm.model.Model;
 import kpi.fpm.view.View;
+
 import java.util.Scanner;
+
 
 /**
  * This class accompanies data entry.
  */
 class InputController {
 
+    private final Model model;
     /**
      * Visualization
      */
@@ -25,9 +29,10 @@ class InputController {
      */
     private final Scanner scanner;
 
-    InputController(final Scanner sc, final View view) {
+    InputController(final Scanner sc, final View view, final Model model) {
         this.view = view;
         this.scanner = sc;
+        this.model = model;
     }
 
     /**
@@ -38,7 +43,7 @@ class InputController {
     boolean finish() {
         view.println("Do you want to add one more person to the notebook? ");
         view.println("Y/N");
-        view.println("Enter: ");
+        view.print("Enter: ");
         String input = scanner.nextLine();
         return input.equals("N");
     }
@@ -57,4 +62,20 @@ class InputController {
         }
         return input;
     }
+
+    /**
+     * Returns login, if it is correct and unique. If login isn't unique,
+     * throws runtime exception, that such login already exists.
+     * @param message the message for print to the console.
+     * @param regex the regular expression.
+     * @return correct and unique login.
+     * @throws UniqueValueException if this login isn't unique.
+     */
+    String inputLogin(String message, String regex) throws UniqueValueException {
+        String login = inputNote(message, regex);
+        if(model.containsLogin(login))
+            throw new UniqueValueException("Such login already exists!", login);
+        return login;
+    }
+
 }

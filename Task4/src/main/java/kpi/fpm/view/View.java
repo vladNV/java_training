@@ -8,6 +8,7 @@
 
 package kpi.fpm.view;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,6 +22,10 @@ public class View {
      */
     public void println(String message){
         System.out.println(message);
+    }
+
+    public void print(String message) {
+        System.out.print(message);
     }
 
     /**
@@ -47,6 +52,14 @@ public class View {
      */
     public void printErr(String message){
         System.err.println(message);
+    }
+
+    /**
+     * Prints date to the console.
+     * @param millis the time in milliseconds.
+     */
+    public void printTime(long millis){
+        System.out.println(new Date(millis));
     }
 
 }

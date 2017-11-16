@@ -45,6 +45,10 @@ public class Model {
         lastAddTime = System.currentTimeMillis();
     }
 
+    public boolean contains(Note element){
+        return notebook.contains(element);
+    }
+
     public List<Note> getNotebook(){
         return notebook;
     }
@@ -55,5 +59,20 @@ public class Model {
 
     public long getLastAddTime() {
         return lastAddTime;
+    }
+
+    /**
+     * Returns <tt>true</tt> if notebook contains this login. Otherwise,
+     * returns <tt>false</tt>.
+     * @param login a string whose presence in this is to be tested.
+     * @return <tt>true</tt> if this list contains the specified element
+     */
+    public boolean containsLogin(String login){
+        for (Note aNotebook : notebook) {
+            if (aNotebook.getLogin().equals(login)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

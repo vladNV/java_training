@@ -30,6 +30,7 @@ public class RegexTest {
     public void testMobileUA(){
         assertEquals(true, checkRegex("+380993255594", REGEXP_MOBILE_NUMBER_UA));
         assertEquals(true, checkRegex("380993255594", REGEXP_MOBILE_NUMBER_UA));
+        assertEquals(true, checkRegex("0503268575", REGEXP_MOBILE_NUMBER_UA));
         assertEquals(true, checkRegex("+38099-32-55-594", REGEXP_MOBILE_NUMBER_UA));
         assertEquals(true, checkRegex("+38099-325-55-94", REGEXP_MOBILE_NUMBER_UA));
         assertEquals(true, checkRegex("0993268575", REGEXP_MOBILE_NUMBER_UA));
